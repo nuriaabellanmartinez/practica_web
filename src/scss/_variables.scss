@@ -1,0 +1,38 @@
+
+// Font families
+$main-font-family: 'Open Sans', sans-serif;
+
+// Font sizes
+$font-size-base: 13px;
+$font-size-small: $font-size-base - 3px;
+$font-size-large: $font-size-base + 5px;
+
+// Base colors
+$color-pantone-green: rgba(210, 218, 232, 0.9);
+$color-blue: rgb(17, 21, 154);
+$color-blue-hover: rgba(0, 0, 0, 0.2);
+
+
+// Main components colors
+$main-text-color: $color-blue;
+$links-color: $color-blue-hover;
+$normal-text-color: black;
+
+// Responsive
+// 667 iphone landscape. 768 ipad portrait
+$mobile-portrait-width: 414px;
+$mobile-landscape-width: 767px;
+$tablet-portrait-width: $mobile-landscape-width + 1;
+$tablet-landscape-width: 1024px;
+
+// Forms variables
+$form-input-border-color: $color-blue;
+$form-input-outline-color: $color-blue;
+$form-button-background-color: $color-blue;
+$form-button-font-color: $color-pantone-green;
+$form-error-background-color: $color-blue;
+$form-error-font-color: $color-pantone-green;
+
+
+
+

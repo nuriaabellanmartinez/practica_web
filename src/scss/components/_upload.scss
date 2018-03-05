@@ -1,0 +1,66 @@
+.upload {
+    .ui-status {
+        &.error {
+            text-align: center;
+             background-color: $form-error-background-color;
+             padding: 10px;
+             border-radius: 5px;
+             color: $form-error-font-color;
+             margin-bottom: 10px;
+             display: none;
+        }
+
+        &.loading {
+            text-align: center;
+            padding-bottom: 10px;        
+            display: none;
+        }
+        
+        &.ideal {
+            .upload-inspiration {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: $font-size-small + 1px;
+            }
+            .go-upload{
+                font-size: $font-size-small - 3px;
+            }
+        }
+    }
+
+    &.error .ui-status.error {
+        display: block;
+    }
+
+    &.loading .ui-status.loading {
+        display: block;
+    }
+
+    @include if-mobile-portrait {
+        .go-upload {
+            box-sizing: border-box;
+            width: calc(50% - 4px);
+            display:inline-block;
+        }
+    }
+
+    @include if-mobile-landscape {
+        .upload-inspiration {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+
+        .go-upload {
+            box-sizing: border-box;
+            width: calc(50% - 4px);
+            display:inline-block;
+        }
+    }
+
+    @include if-tablet-landscape {
+        margin-top: 30px;
+    }
+}

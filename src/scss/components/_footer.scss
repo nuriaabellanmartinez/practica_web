@@ -1,0 +1,55 @@
+.web-footer { 
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: fade-out(white, 0.1);
+    //position: fixed;
+    bottom: 0px;
+    width: 100%;
+    font-size: $font-size-small - 4px;
+    font-weight: bold;
+    color: black;
+    flex-direction: row;
+    
+    .top {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    .info {
+        float: left;
+        margin-left: 5px;
+        padding-top: 5px;
+        padding-bottom: 3px;
+
+        .page {
+            color: $color-blue;
+        }
+    }
+
+    .upv {
+        width: 20%;
+        float: right;
+        margin-right: 5px;
+    }
+
+    @include if-mobile-landscape {
+        .page, .university, .fac, .course {
+            font-size: $font-size-small - 1px;
+        }
+        .upv {
+            max-width: 15%;
+        }
+    }
+
+    @include if-tablet-landscape {
+        .page, .university, .fac, .course {
+            font-size: $font-size-small;
+        } 
+        .upv {
+            max-width: 15%;
+        }
+    }
+
+}

@@ -1,0 +1,99 @@
+.web-header {
+    background: fade-out(white, 0.1); 
+    //background: white;
+    position: fixed;
+    top: 0px; 
+    width: 100%;
+    font-size: $font-size-small;
+    font-weight: bold;
+    color: $color-blue;
+    flex-direction: row;
+
+    transition: background 0.5s;
+    &:hover {
+        background: $color-pantone-green;
+    }
+    
+    .top-sites {
+        flex-direction: row;
+        padding-top: 5px;
+
+        .search {
+            float: left;
+            width: 100px;
+            height: 15px;
+            margin-left: 5px;
+            font-size: $font-size-small - 2px;
+
+        }
+
+        @include if-mobile-landscape {
+            .search {
+                font-size: $font-size-small + 2px;
+            }
+        }
+
+        @include if-tablet-portrait {
+            .search {
+                font-size: $font-size-small + 2px;
+            }
+        }
+
+        .sites { 
+            float: right;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-top: 7px;
+            margin-right: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: $font-size-small - 1px;
+            
+            .upload, .contact, .sign-in {
+                padding: 5px;
+                &:hover {
+                    color: $color-blue-hover;
+                    text-decoration:none;
+                    transition: 0.2s;
+                }
+            }
+        }
+        @include if-mobile-landscape {
+            .sites {
+                font-size: $font-size-small + 1px;
+            }
+        }
+        @include if-tablet-portrait {
+            .sites {
+                font-size: $font-size-small + 1px;
+            }
+        }
+    }
+
+    .web-logo {
+        .logo {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+        }
+    
+        @include if-mobile-portrait {
+            .logo {
+                margin-left: 10%;
+            }
+        }
+    
+        @include if-mobile-landscape {
+            .logo {
+                margin-left: 10%;
+            }
+        }
+    
+        @include if-tablet-portrait {
+            .logo {
+                margin-left: 4%;
+            }
+        }
+    }
+
+}

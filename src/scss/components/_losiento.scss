@@ -1,0 +1,110 @@
+.losiento {
+    width: 100%;
+    
+    .ui-status{
+        display: none;
+    }
+    
+    &.ideal {
+        .ui-status.ideal {
+            display: block;
+        }
+    }
+    
+    &.loading {
+        .ui-status.loading {
+            display: block;
+        }
+    }
+    
+    &.error {
+        .ui-status.error {
+            display: block;
+        }
+    }
+    
+    &.error, &.loading {
+        font-size: $font-size-large;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .description-images {
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 15px;
+        padding-top: 105px;
+        font-size: $font-size-small - 3px;
+        font-weight: bold;
+        color: $color-blue;
+        .description-image-1, .description-image-2 {
+            width: 100%;
+            height: 100%; 
+        }
+    }
+
+    .what-who {
+        font-weight: bold;
+        font-size: $font-size-small - 1px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
+
+    .what {
+        font-size: $font-size-small + 3px;
+    }
+
+    .link-losiento {
+        font-size: $font-size-small - 1px;
+        color: $color-blue;
+        text-decoration: none;
+        margin-left: 15px;
+        font-weight: bold;
+        &:hover {
+            color: $color-pantone-green;
+            text-decoration:none;
+            transition: 0.2s;
+        }
+    }
+
+    @include if-mobile-landscape {
+        .description-images {
+            width: calc(50% - 10px);
+            margin-left: 25%;
+            margin-top: 20px;
+        }
+        .what-who {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .link-losiento {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+    }
+
+    @include if-tablet-portrait {
+        .description-images {
+            margin-top: 40px;
+        }
+        .what-who {
+            font-size: $font-size-small + 2px;
+        }
+        .link-losiento {
+            font-size: $font-size-small + 2px;
+        }
+    }
+
+    @include if-tablet-landscape {
+        .description-images {
+            margin-top: 85px;
+        }
+        .what-who {
+            font-size: $font-size-small + 3px;
+        }
+        .link-losiento {
+            font-size: $font-size-small + 3px;
+        }
+    }
+}
